@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ProfileSeeder::class);
         $this->call(PedidosSeeder::class);
         $this->call(ClientesSeeder::class);
+        $this->call(WoodSeeder::class);
     }
 }

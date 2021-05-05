@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','WoodController@woodList');
+Route::get('/form','WoodController@woodform');
+Route::Post ('/save','WoodController@woodsave')->name('save');
+Route::delete('/delete/{id}','WoodController@delete')->name('delete');
