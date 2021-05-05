@@ -26,4 +26,15 @@ class WoodController extends Controller
         Wood::destroy($id);
         return back()->with('usuarioeliminado','Usuario eliminado');
     }
+
+    public function editform($id){
+        $woods = Wood::findOrFail($id);
+        return view('woods.editform',compact('woods'));
+    }
+
+    public function edit(Request $request,$id){
+        $DataWood = request()->except((['_token','_method']));
+        Wood::where('id','*',$id)->update($DataWood);
+        return back()->with('usuarioModificado','Usuario Modificado');
+    }
 }

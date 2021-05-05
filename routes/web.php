@@ -17,3 +17,5 @@ Route::get('/','WoodController@woodList');
 Route::get('/form','WoodController@woodform');
 Route::Post ('/save','WoodController@woodsave')->name('save');
 Route::delete('/delete/{id}','WoodController@delete')->name('delete');
+Route::get('/editform/{id}','WoodController@editform')->name('editform');
+Route::patch('/edit/{id}','WoodController@edit')->name('edit');

@@ -25,6 +25,7 @@
                     <td>{{$wood->espesor_mm}}</td>
                     <td>{{$wood->cantidad}}</td>
                     <td>
+                        <a href="{{route('editform',$wood->id)}}" class="btn btn-primary">Modificar</a>
                         <form action="{{route('delete',$wood->id)}}" method="POST">
                             @csrf   @method('DELETE')
                             <button type="submit" onclick="return comfirm('¿borrar?') "class="btn btn-danger">borrar</button>
